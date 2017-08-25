@@ -1,4 +1,6 @@
-This tutorial shows you how to get started developing for Alexa with Java and Maven.  
+description: Tutorial - Building Alexa Skills With Java and Bespoken
+
+This tutorial shows you how to get started developing for Alexa with Java and Maven.
 
 ## Prerequisites
 

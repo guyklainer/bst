@@ -1,3 +1,4 @@
+description: Bespoken Launch Command
 
 ## Overview
 The launch command send a launch request to your service as if it was comming from alexa itself.

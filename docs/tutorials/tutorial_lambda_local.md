@@ -1,3 +1,4 @@
+description: Tutorial - Developing AWS Lambdas Locally with Bespoken Proxy
 
 This tutorial shows you how to use Bespoken to test AWS Lambdas locally.
 

@@ -1,3 +1,4 @@
+description: Tutorial - Debugging AWS Lambdas with Bespoken Proxy
 
 This tutorial shows you how to get setup using Webstorm to debug your AWS Lambdas locally. More tutorials to come for other IDEs (though the basic approach is the same :-)).
 

@@ -1,4 +1,6 @@
-This tutorial shows you how to get started using our BST Alexa emulator with Node.js and Javascript.  
+description: Tutorial - Alexa Skill Emulator
+
+This tutorial shows you how to get started using our BST Alexa emulator with Node.js and Javascript.
 
 The purpose of the emulator is to enable unit- and functional-testing of Alexa Skills, 
 allowing one to:

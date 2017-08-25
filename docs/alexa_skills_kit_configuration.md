@@ -1,3 +1,4 @@
+description: Configuring Alexa Skills with Bespoken Proxy
 
 In order to leverage the bst proxy functionality, you must configure your skill from the Amazon Developer Console to point to the bst proxy server.
 

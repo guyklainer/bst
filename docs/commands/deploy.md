@@ -1,3 +1,4 @@
+description: Bespoken Deploy Command
 
 ## Overview
 The deploy command allows you to install and update a Node/JavaScript lambda skill in the AWS cloud. 

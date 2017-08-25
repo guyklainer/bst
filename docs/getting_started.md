@@ -1,3 +1,5 @@
+description: Getting Started With Bespoken
+
 ## Installation
 
 Make sure you have NPM and node installed:

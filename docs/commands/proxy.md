@@ -1,3 +1,4 @@
+description: Bespoken Proxy Command
 
 ## Overview
 The proxy command allows you to interact with a local service running on your machine via an Alexa device.  Using it, you can make changes to code running on your machine and immediately make them available via an Echo or the Alexa simulator.
