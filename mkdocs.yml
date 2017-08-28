@@ -40,5 +40,8 @@ extra_javascript:
   - api/assets/js/search.js
 
 extra:
-  logo: 'assets/images/logo.png'
+  palette:
+    primary: 'teal'
+    accent: 'deep orange'
+
 
