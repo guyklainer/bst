@@ -3,6 +3,7 @@ site_description: Bespoken Documentation
 repo_url: https://github.com/bespoken/bst
 site_dir: 'site'
 strict: false
+
 pages:
 - Home: index.md
 - Getting Started: getting_started.md
