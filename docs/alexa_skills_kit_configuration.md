@@ -1,4 +1,4 @@
-description: Configuring Alexa Skills with Bespoken Proxy
+<meta name="description" content="Configuring Alexa Skills with Bespoken Proxy" />
 
 In order to leverage the bst proxy functionality, you must configure your skill from the Amazon Developer Console to point to the bst proxy server.
 
@@ -22,7 +22,7 @@ From your [Skill's list](https://developer.amazon.com/edw/home.html#/skills/list
 
 Make sure Account linking is set to "No" and on the SSL Certificate step select "My development endpoint is a subdomain of a domain that has a wildcard certificate from a certificate authority".
 
-__ Note__ To help generate your configuration URL, you can also use [bst proxy urlgen](/commands/proxy#bst-proxy-urlgen)
+__ Note__ To help generate your configuration URL, you can also use [bst proxy urlgen](/en/latest/commands/proxy#bst-proxy-urlgen)
 
 ## Path Component for proxy http
 

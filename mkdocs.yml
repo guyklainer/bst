@@ -2,7 +2,8 @@ site_name: Bespoken Docs
 site_description: Bespoken Documentation
 repo_url: https://github.com/bespoken/bst
 site_dir: 'site'
-strict: false
+strict: true
+google_analytics: ['UA-99287066-2', 'docs.bespoken.io']
 
 pages:
 - Home: index.md
@@ -28,21 +29,12 @@ pages:
     - Debugging Lambdas Locally: tutorials/tutorial_lambda_debugger.md
     - Deploying Lambdas: tutorials/tutorial_lambda_deploy.md
 
-theme: material
+theme: readthedocs
 
 markdown_extensions:
-  - attr_list
-  - meta
 
 extra_css: [assets/css/style.css]
 
 extra_javascript:
   - api/assets/js/main.js
   - api/assets/js/search.js
-
-extra:
-  palette:
-    primary: 'teal'
-    accent: 'deep orange'
-
-

@@ -129,7 +129,7 @@ Now let's "tell" something to our skill. From another shell session run the BST 
 "random qoute" is one of the sample utterances. The command prints out the matching request (intent) and the response. 
 No need to go to the Amazon Alexa UI to do basic tests. 
 
-You can read more about the `bst speak` command [here](http://docs.bespoken.tools/en/latest/commands/speak/)
+You can read more about the `bst speak` command [here](/commands/speak/)
 
 ```shell
 $ bst speak random quote
@@ -203,7 +203,7 @@ Response:
 ```
 
 If something isn't right, you can debug the skill locally with BST. 
-You can step through your code using your favorite IDE. [Follow this tutorial](http://docs.bespoken.tools/en/latest/tutorials/tutorial_lambda_debugger) 
+You can step through your code using your favorite IDE. [Follow this tutorial](/tutorials/tutorial_lambda_debugger)
 to learn how easy that is.
 
 ## Install the Lambda

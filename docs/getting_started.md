@@ -1,4 +1,4 @@
-description: Getting Started With Bespoken
+<meta name="description" content="Getting Started With Bespoken" />
 
 ## Installation
 
@@ -29,9 +29,9 @@ npm install bespoken-tools --save
 
 You will then be able to use our:
  
-* [BSTAlexa](http://docs.bespoken.tools/en/latest/api/classes/bstalexa.html) emulator 
-* [BSTEncode](http://docs.bespoken.tools/en/latest/api/classes/bstalexa.html) audio encoder
-* [Logless](http://docs.bespoken.tools/en/latest/api/classes/logless.html) effortless logging and diagnostics service
+* [BSTAlexa](/api/classes/bstalexa.html) emulator
+* [BSTEncode](/api/classes/bstalexa.html) audio encoder
+* [Logless](/api/classes/logless.html) effortless logging and diagnostics service
 
 ## Updating
 
