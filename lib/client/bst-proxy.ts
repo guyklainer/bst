@@ -21,7 +21,7 @@ const DefaultLambdaPort = 10000;
  *
  * To start it a proxy programmatically, simply call:
  * ```javascript
- * const proxy = BSTProxy.lambda("index.js").("SECRET_KEY").start(() => {
+ * const proxy = BSTProxy.lambda("index.js").secretKey("SECRET_KEY").start(() => {
  *      // Stuff to do on start
  * });
  * ```
