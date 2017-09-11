@@ -33,7 +33,6 @@
     "@types/sinon": "^1.16.35",
     "@types/winston": "^2.3.4",
     "@types/wrench": "0.0.28",
-    "appveyor-mocha": "^1.1.2",
     "codecov": "^2.3.0",
     "coveralls": "^2.13.1",
     "dotenv": "^2.0.0",

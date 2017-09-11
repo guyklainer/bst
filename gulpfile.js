@@ -26,8 +26,11 @@ gulp.task('test-suite-run', ['build'], function() {
                 }
 
                 testStatus |= mocha.status;
-                console.log(mocha.stdout.toString());
-                if (mocha.stderr.length) {
+                if (mocha.stdout) {
+                    console.log(mocha.stdout.toString());
+                }
+
+                if (mocha.stderr && mocha.stderr.length) {
                     console.error("Errors:\n" + mocha.stderr);
                 }
             })
