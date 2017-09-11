@@ -45,7 +45,7 @@
     "gulp-shell": "^0.5.2",
     "gulp-tap": "^1.0.1",
     "gulp-tslint": "^6.1.2",
-    "mocha": "3.3.0",
+    "mocha": "^3.5.2",
     "mockery": "^1.7.0",
     "nyc": "^10.3.2",
     "sinon": "^1.17.5",
