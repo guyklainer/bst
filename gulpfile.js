@@ -20,9 +20,15 @@ gulp.task('test-suite-run', ['build'], function() {
         .pipe(
             tap(function(file, t) {
                 const testFile = path.relative(process.cwd(), file.path);
-                const mocha = spawn('node_modules/mocha/bin/mocha', ['--colors', testFile]);
+                //TODO: Remove this log after appveyor functionality works correctly
+                console.log("mochaBinary: ", mochaBin);
+                const mochaBin = path.join(process.cwd(), 'node_modules/mocha/bin/mocha');
+                const mocha = spawn(mochaBin, ['--colors', testFile]);
+
+                //TODO: Remove this log after appveyor functionality works correctly
+                console.log ("Mocha Object", mocha);
                 if (mocha.error) {
-                    console.error('Error: ' + mocha.error);
+                    console.error('Error: ' + mocha.error, mocha.error);
                 }
 
                 testStatus |= mocha.status;
