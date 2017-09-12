@@ -169,7 +169,7 @@ describe("BespokeClient", function() {
             // Let everything run for one second and ensure no errors are received
             setTimeout(function () {
                 console.log("Checking if timing is the issue, count is: ", count);
-                console.log("Platform ")
+                console.log("Platform: ", process.platform);
                 // Mac and Linux generate more events than windows due threading in windows
                 if ((process.platform.includes("win") &&  count < 8) ||
                     (!process.platform.includes("win") && count < 40)) {
