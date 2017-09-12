@@ -167,6 +167,7 @@ describe("BespokeClient", function() {
 
             // Let everything run for one second and ensure no errors are received
             setTimeout(function () {
+                console.log("Checking if timing is the issue, count is: ", 40);
                 if (count < 40) {
                     try {
                         assert(false, "Not enough keep alives received");
