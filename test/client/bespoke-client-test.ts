@@ -151,6 +151,7 @@ describe("BespokeClient", function() {
             const nodeManager = new NodeManager(testPort);
             let count = 0;
             (<any> NodeManager).onKeepAliveReceived = function (node: Node) {
+                console.log("Increasing count:", count);
                 count++;
                 node.socketHandler.send(Global.KeepAliveMessage);
             };
@@ -167,7 +168,7 @@ describe("BespokeClient", function() {
 
             // Let everything run for one second and ensure no errors are received
             setTimeout(function () {
-                console.log("Checking if timing is the issue, count is: ", 40);
+                console.log("Checking if timing is the issue, count is: ", count);
                 if (count < 40) {
                     try {
                         assert(false, "Not enough keep alives received");
