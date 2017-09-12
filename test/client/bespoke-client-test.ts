@@ -37,11 +37,21 @@ describe("BespokeClient", function() {
 
         it("Connects to something other than localhost", function(done) {
             this.timeout(5000);
-            const client = new BespokeClient("JPK" + nodeMajorVersion, "proxy.bespoken.tools", 5000, "127.0.0.1", testPort);
+            const client = new BespokeClient("JPK" + nodeMajorVersion,
+                "proxy.bespoken.tools",
+                5000,
+                "127.0.0.1",
+                testPort);
+
             client.onConnect = function (error: any) {
                 const webhookCaller = new HTTPClient();
-                webhookCaller.post("proxy.bespoken.tools", 443, "/test?node-id=JPK" + nodeMajorVersion, "Test", function (data: Buffer, statusCode: number, success: boolean) {
-                    assert.equal(data.toString(), "BST Proxy - Local Forwarding Error\nconnect ECONNREFUSED 127.0.0.1:" + testPort);
+                webhookCaller.post("proxy.bespoken.tools",
+                    443,
+                    "/test?node-id=JPK" + nodeMajorVersion,
+                    "Test",
+                    function (data: Buffer, statusCode: number, success: boolean) {
+                    assert.equal(data.toString(),
+                        "BST Proxy - Local Forwarding Error\nconnect ECONNREFUSED 127.0.0.1:" + testPort);
                     assert.equal(statusCode, 500);
 
                     client.shutdown(function () {
@@ -138,14 +148,14 @@ describe("BespokeClient", function() {
 
     describe("KeepAlive worked", function() {
         it("Gets lots of keep alives", function(done) {
-            const nodeManager = new NodeManager(9000);
+            const nodeManager = new NodeManager(testPort);
             let count = 0;
             (<any> NodeManager).onKeepAliveReceived = function (node: Node) {
                 count++;
                 node.socketHandler.send(Global.KeepAliveMessage);
             };
 
-            const client = new MockBespokeClient("JPK", "127.0.0.1", 9000, "127.0.0.1", 9001);
+            const client = new MockBespokeClient("JPK", "127.0.0.1", testPort, "127.0.0.1", testPort + 1);
             nodeManager.start();
             client.connect();
 
@@ -171,7 +181,7 @@ describe("BespokeClient", function() {
 
     describe("KeepAlive failed", function() {
         it("Fails", function(done) {
-            const nodeManager = new NodeManager(9000);
+            const nodeManager = new NodeManager(testPort);
             let count = 0;
             (<any> NodeManager).onKeepAliveReceived = function (node: Node) {
                 count++;
@@ -180,7 +190,7 @@ describe("BespokeClient", function() {
                 }
             };
 
-            const client = new MockBespokeClient("JPK", "127.0.0.1", 9000, "127.0.0.1", 9001);
+            const client = new MockBespokeClient("JPK", "127.0.0.1", testPort, "127.0.0.1", testPort + 1);
             nodeManager.start();
             client.connect();
 
