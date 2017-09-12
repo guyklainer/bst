@@ -172,8 +172,10 @@ describe("BespokeClient", function() {
                         assert(false, "Not enough keep alives received");
                     } catch (error) {
                         done(error);
+                        return;
                     }
                 }
+
                 client.shutdown(function () {
                     nodeManager.stop(function () {
                         done();
@@ -209,7 +211,12 @@ describe("BespokeClient", function() {
                 console.log("Count: " + count + " Failures: " + failureCount);
 
                 if (failureCount > 2) {
-                    assert(false, "Too many failures received");
+                    try {
+                        assert(false, "Too many failures received");
+                    } catch (error) {
+                        done(error);
+                        return;
+                    }
                 }
 
                 client.shutdown(function () {
