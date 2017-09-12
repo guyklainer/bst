@@ -27,7 +27,7 @@ describe("BespokeClient", function() {
     const testPort = 9000 + nodeMajorVersion;
     describe("#connect()", function() {
         it("Fails to connect", function(done) {
-            const client = new BespokeClient("JPK", "localhost", 9000, "localhost", 9000 );
+            const client = new BespokeClient("JPK", "127.0.0.1", 9000, "localhost", 9000 );
             client.onConnect = function (error: any) {
                 assert(error);
                 done();
@@ -145,7 +145,7 @@ describe("BespokeClient", function() {
                 node.socketHandler.send(Global.KeepAliveMessage);
             };
 
-            const client = new MockBespokeClient("JPK", "localhost", 9000, "localhost", 9001);
+            const client = new MockBespokeClient("JPK", "localhost", 9000, "127.0.0.1", 9001);
             nodeManager.start();
             client.connect();
 
@@ -180,7 +180,7 @@ describe("BespokeClient", function() {
                 }
             };
 
-            const client = new MockBespokeClient("JPK", "localhost", 9000, "localhost", 9001);
+            const client = new MockBespokeClient("JPK", "localhost", 9000, "127.0.0.1", 9001);
             nodeManager.start();
             client.connect();
 
