@@ -145,7 +145,7 @@ describe("BespokeClient", function() {
                 node.socketHandler.send(Global.KeepAliveMessage);
             };
 
-            const client = new MockBespokeClient("JPK", "localhost", 9000, "localhost", 9001);
+            const client = new MockBespokeClient("JPK", "127.0.0.1", 9000, "127.0.0.1", 9001);
             nodeManager.start();
             client.connect();
 
@@ -180,7 +180,7 @@ describe("BespokeClient", function() {
                 }
             };
 
-            const client = new MockBespokeClient("JPK", "localhost", 9000, "localhost", 9001);
+            const client = new MockBespokeClient("JPK", "127.0.0.1", 9000, "127.0.0.1", 9001);
             nodeManager.start();
             client.connect();
 
