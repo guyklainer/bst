@@ -168,7 +168,11 @@ describe("BespokeClient", function() {
             // Let everything run for one second and ensure no errors are received
             setTimeout(function () {
                 if (count < 40) {
-                    assert(false, "Not enough keep alives received");
+                    try {
+                        assert(false, "Not enough keep alives received");
+                    } catch (error) {
+                        done(error);
+                    }
                 }
                 client.shutdown(function () {
                     nodeManager.stop(function () {
