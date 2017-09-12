@@ -151,7 +151,6 @@ describe("BespokeClient", function() {
             const nodeManager = new NodeManager(testPort);
             let count = 0;
             (<any> NodeManager).onKeepAliveReceived = function (node: Node) {
-                console.log("Increasing count:", count);
                 count++;
                 node.socketHandler.send(Global.KeepAliveMessage);
             };
@@ -168,8 +167,6 @@ describe("BespokeClient", function() {
 
             // Let everything run for one second and ensure no errors are received
             setTimeout(function () {
-                console.log("Checking if timing is the issue, count is: ", count);
-                console.log("Platform: ", process.platform);
                 // Mac and Linux generate more events than windows due threading in windows
                 if ((process.platform.includes("win") &&  count < 8) ||
                     (!process.platform.includes("win") && count < 40)) {
@@ -213,8 +210,6 @@ describe("BespokeClient", function() {
             };
 
             setTimeout(function () {
-                console.log("Count: " + count + " Failures: " + failureCount);
-
                 if (failureCount > 2) {
                     try {
                         assert(false, "Too many failures received");
